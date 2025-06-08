@@ -1,1 +1,526 @@
 My React Notes:
+# Bölüm 1 - Getting Started
+
+v1 - wellcome to course
+
+v2 - What is React.js? and Why would You use it?
+
+javascript sayfayı okuduktan sonra müdahale ettiği için react gibi akıcı sayfa aniamsyonları yada dinamizm yaratamaz.
+
+v3 - ReactJS vs Vanilla JS - Whjy use react
+
+React da bir şey indirmene gerek yok geliştirme yapmak için.
+
+html kodu doğal olarak js dosyasında desteklenmiyor.
+
+v4 * Editing our first React app
+
+![image.png](attachment:81630cae-159d-489c-ab09-1d150368e41e:image.png)
+
+harika başladık, pratik için site çok iyi
+
+v5 - about the course
+
+![image.png](attachment:6deab327-8ba5-4d7d-8c10-ea67310a0573:image.png)
+
+harika en başından verdi müfredatı
+
+kursun sonunda 3.5 saatlik bir özet de varmış.
+
+v6- two ways
+
+direk özeti izle vaktin yoksa dedi
+
+v7 - kursu tüketme tavsiyeleri ve komünite
+
+v8 - dc linki
+
+v9 - creating react projects
+
+use sandboxcode. 
+
+epey iyi ders aslında local de react çalışmak için rehber
+
+v10- neden react için bir şey yülemek lazım
+
+genişçe anlattı. Özetle browser’ın anlayacağı koda derlemek lazım
+
+v11 - bonus IDE offering
+
+# Bölüm 2 - JS Refresher
+
+v12 - module intro
+
+bu bir js kursu değil js hatırlatması!
+
+v13 - Starting Project
+
+v14- Adding aJS to A page, how react projects differ
+
+düz js browser içindi
+
+nodejs yada deno browser dışında çalışabilmek içindi
+
+react yada  capacitor js ile mobile app bile yazarsın
+
+ki biliyoruz ki express js ile de server backend yazılıyor
+
+type =”module” ile bu js’in modül olduğunu ilan ediyormuşuz.
+
+react de js scriptleri inject etmiyormuşuz, bu zaten olağan şekilde oluyormuş.
+
+v15 - React projects use a build process
+
+burada jsx kullanıyoruz, js değil, scrfipt işi oto inject ediliyor build iken.
+
+v16 - import and export
+
+variable’ı export etmeliymişiz. başka file da kullancaksak.
+
+ardından da kullanılacak sayfada import etmeliymişiz.
+
+./ yani aynı folder
+
+../ yani üst folder
+
+her sayfada bir tane variable’ı isimsiz istersek export edebiliyoruz
+
+bu isimsiz de import edildiğinde default isimiyle import ediliyor
+
+istersek her variable’ı bir sayfadaki export edebilyoruz
+
+v17 - revisiting variables and values
+
+v18 - revisiting operators
+
+buralar hep basit olduğu için hızlı geçiyorum. eşittir === şeklinde mesela bla bla.
+
+v19 - revisiting functions, paramters
+
+v20 - arrow function
+
+Instead of
+
+`1. number => { 
+2.   return number * 3;
+3. }`
+
+1. 1. number => {
+2. 2.  return number * 3;
+3. 3. }
+
+you could write
+
+`1. number => number * 3;`
+
+1. 1. number => number * 3;
+
+The following code would be invalid:
+
+`1. number => return number * 3; // invalid because return keyword must also be omitted!`
+
+1. 1. number => return number * 3; // invalid because return keyword must also be omitted!
+
+`1. number => if (number === 2) { return 5 }; // invalid because if statements can't be returned`
+
+1. 1. number => if (number === 2) { return 5 }; // invalid because if statements can't be returned
+
+v21 - objects, classes
+
+v22 - arrays
+
+v24 - destructuring
+
+const [name, surname] = [alice, sunderland]; 
+
+gibi de eşitleyip kullnabiliyryz
+
+aslında bu bir obje oluyoır
+
+name = {
+
+name: “alice”,
+surname: “sunderland”
+};
+
+v26 - the spread operator
+
+const zort = [ a, b];
+
+const port = [c];
+
+const tork = […zort, …port];
+
+console.log(tork); // olacak sana dönüt a,b,c array elemanları
+
+v29 - Using Functions as Values
+
+v30 - defining functions in functions
+
+scope’a dikkat etmek lazım
+
+v31 - reference vs primitive values
+
+# Bölüm 3 - React Essentails, Components, JSX, PRops, State and More
+
+v35- module introduction
+
+epey dolu bir bölüm başlıyor.
+
+v36- Is is all about components!
+
+React ekosistemi zeballah kadar çok özelliğe sahiptir. Zira components yapısı sağolsun böyle bir ormana sahibiz.
+
+React app dediğimiz şey component birleşimidir
+
+Component dediğimiz şey aynı anda HTML, CSS, JS birleşimi igbidir
+
+Böyle tek parça çok yönlü bir şeye yani componente sahip olunca kullanması da modüler oluyor epey.
+
+koca bir HTML sayfasında hata aramaktansa hatalı modülün componentinde hatayı aramak dhaakolaydır.
+
+v37 - Setting up the project
+
+online yada zipli devam et diyor hoca. Sanırım zip local hep devam edicem.
+
+v38 - JSX ve REACT Components [Core Concept]
+
+index.html içinde index.jsx scripti vardır.
+
+Bu dosyada App.jsx içerir. Root amaçlıdır aslında bu ilk jsx dosyası.
+
+JSX de aslıdna zatane javasciprt extensive syntax’ın kısaltması
+
+Function isimleri upper case başlamalı.
+
+v39- Creating using First React App
+
+costum component aslında bir javascirpt funciton’ından işbarettri. 
+
+return ederken html return ediyoruz () parantez içinde. returnden evvel kodu yoğruacak işlemleri yapıyoruz.
+
+sonra biz bu kodu html kodu gibi kullanıyoruz. 
+
+<deneme/> gibi
+
+aslında <deneme></deneme> de oluyormuş ta manasız uzunca yazmak.
+
+v41 - How React Handles Components & How it  Builds  a Component Tree
+
+Entrypoint dediğimiz jsx bir kök yani root ise kalanı da dallarıdır.
+
+Yani dümdüz DOM’dan bahsediyporuz
+
+built in component'lerde varmış ve bunlar lowercase başlıyormuş. 
+
+v42 - using outputting Dynamic Values
+
+dinamik veriyi nasıl koyarız
+
+daha evvel tanımladığın bir const değeri {value} olarak html ksımına koyabiliyorin
+
+dilersen array birçimnide kullan
+
+{value[0]}
+
+v43 - Setting HTML Attributes Dynamically and Loading Image Files
+
+resimleri dümdüz şöyle çekmek hatalı bir yaklaşım olabilir. Zira build kısımda yada canlıdayken patlayabilir.
+
+<img src="src/assets/react-core-concepts.png" />
+
+bunun yerine import reactImageName from “./assets … bla bla”; 
+
+de ve ardından <img src={reactImageName} dersin
+
+v44- making Components Reusable with PRops
+So now that we know
+
+tamam component tekrar kullanabiliyoruz da aslında demek istenen aynı başlığı 2 kez kullan olayı değil
+
+işte tam burada Props devreye giriyor.
+
+yani props denen şey aslında template. obje'nin html componentedökümünde kullanılabilecek bir template. kullanması mantıken güzel, el pratiği ile 2-3 sefer sonra bende oturur bu
+
+v45 - alternative Props Syntaxes
+
+yani biz data.js diye bir javascript dosyasında bir obje array'i tutup bunu import edip de proops'larımızı doldurabiliyoruz
+
+v47 - best practise: Storing Components in Files  & Using a Good Project Structure
+
+her bir haltı app.jsx de toplamamalıyız
+
+componentlere isim verirken gerçekten ne işe yarıyorsa o ismi ver
+
+her bir componenti ayrı class’da hiyerarşiye yerleştirmeliyiz.
+
+v48 - Storing Component Style Files Next to Components
+
+CSS dosyları da minik dosyalar halinde olabilir compoents gibi
+
+AMA DİKKAT - css global etkiye sahiptir tüm projede. Tek etkiye sahip olması için module olarak eklenmesi lazım.
+
+Demek kanaryaSeverler.css değilde kanaryaSeverler.module.css diye kaydedip onu JS dosyası gibi import edince işlem tamam oluyor.
+
+v49 - Component Composition: The Special children Prop
+
+hoca sekmeli görünüm için section’lar oluşturdu main etiketi altında
+
+aslında ders daha çok parçalı children kullanma kabiliyeti üzerineydi.
+
+v50 - Reacting to Events
+
+şu tablara tıklayınca ne olacak görmek şuanki amacımız.
+
+eh tabiki onClick={} ile yapacaz bunu.
+
+component fonskiyonu içinde handleClick diye bir şey oluşturabiliriz. Böylece ne olacağına ilişkin bir takım düzenlemeler yapabiliriz.
+
+sonra onlick içinde çağır onu
+
+v51 - Passing Functions as Values to Props
+
+onclick de ne olacağın paretmetre şeklinde de geçirebiliyoruz
+
+v52 - Passing Costum Arguments to Event Functions
+
+callback wrapper denen olayı anlatıyor hoca
+
+v53- hot not to update the UI - A look Behind The Scenes of React
+
+### 🔁 **Problem: Neden UI Güncellenmiyor?**
+
+- `tabContent` adında **normal bir değişken** tanımlayıp, butona basınca onun değerini değiştiriyoruz.
+- Ama **UI güncellenmiyor.**
+- Sebep: **React, bir component fonksiyonunu sadece 1 kere render eder.**
+    - `App()` sadece 1 kez çalışır (ilk render’da).
+    - `handleSelect()` çağrılsa da `App()` tekrar çalışmadığı için JSX güncellenmez.
+
+### **Çözüm: "State" Kavramı**
+
+- React'a "Bak burası değişti, tekrar render et" demek için **state** kullanılır.
+- Bu dersin sonunda diyor ki:
+    
+    > “İşte bu yüzden React’te useState gibi şeyler var. Çünkü sadece state değişirse, component yeniden render olur.”
+    > 
+
+v54 - Managing State and Using Hooks
+
+import {useState}from ‘react’;
+
+useState() fonskiyonunu en tepe de kullanmalısın App fonksiyonunda
+
+### 🔧 Hook Nedir?
+
+**Hook**, React 16.8 ile gelen özel bir **fonksiyon ailesidir**. React component’leri içinde **durum (state)**, **yaşam döngüsü (lifecycle)** gibi işlevleri **fonksiyonel component’lerde kullanmamıza izin verir**.
+
+asla nested funciton içinde çağırma
+
+### 🔍 Neden `let` kullanınca çalışmıyor?
+
+Çünkü `let`, `const`, `var` gibi değişkenleri **React izlemez**. O, sadece kendi sistemine dahil ettiği (`useState`, `useReducer`, `useEffect`) gibi yapıları izler. Bunlar React'in "dedikodu ağı" gibi, biri değişince diğeri haberdar oluyor. Ama `let` gibi dışarıdaki değişkenler izole; haberleşemezler.
+
+v55 - Deriving and Outputting Data Based on State
+
+dinamik değer kullanma objeden
+
+v56 - Rendering Content Conditionally
+
+Belki de biz tablı menü de bir şey göstermeden evvel sadce bir şey seçin demek istiyoruzdur
+
+bir ternary kod ile bunu halledebiliyoruz
+
+{!selectedTopic (yani useState için dinamil değiştirmek istediğimiz variable) ?<p>ilk gözüken yazı</p> : null } diyebilirsin.
+
+Normalde göstermek istediğini de {selectedTopic ? content : null }diyip gösterebilirsin.
+
+yada iyisimi ilk ternary’nin null kısmına da göstermek istediğin content’i yazabilrisin böyleece tek ternary ile kurtuluırsun
+
+Ha alternatif olarakda komple AND operatoru kullanılabilir 2 tane ardı ardına netice de.
+
+hoca üçüncü bir yaklaşımdan  bahsediyor. JSX kodunu bir değere atayabiliriz diyor.
+
+if diyor return’den evvel, selectedTopic true olursa bizim content artık bir değere eşit olur diyor ve o JSX değerini gösteriyor sahnede.
+
+### 1. **Ternary Operator**
+
+```jsx
+jsx
+KopyalaDüzenle
+{selectedTopic ? <Content /> : <p>Please select a topic</p>}
+
+```
+
+### 2. **Logical AND (`&&`) Operator**
+
+```jsx
+jsx
+KopyalaDüzenle
+{selectedTopic && <Content />}
+
+```
+
+> ✅ Sadece true olduğunda bir şey göstermek istiyorsan ideal.
+> 
+
+### 3. **Önceden Hazırlanmış Değişkenle JSX Döndürmek**
+
+```jsx
+jsx
+KopyalaDüzenle
+let content;
+
+if (!selectedTopic) {
+  content = <p>Please select a topic</p>;
+} else {
+  content = <Content />;
+}
+
+return (
+  <section>
+    {content}
+  </section>
+);
+
+```
+
+v57- CSS Styling & Dynamic Styling
+
+tabiki className ile hallediyoruz işimizi
+
+id, className işi JS ve HTML ile benzer.
+
+className içine ternary yapı da kurabiliyoruz. Böylece dinamizm yaratıyoruz.
+
+v58 - Outputting List Data Dynamically
+
+hoca diyorki özetle bu video da, kardeşim ne gerek var elle ...itemİsmiYazıyorsun. Bunun yerine obje arrayinin .map methodu ile her bir elemanı için iterasyon yap.
+
+React'ın işler karmaşıklaştıkça sağlıklı render edebilmesi için proplara paremetra olarak bulunmasa dahi key yazmalıymışız. Hoca de diyorki genelde [item.name](http://item.name/) gibi unique olanı key={} içine yaz komponenti yaratırken
+
+v59 - module summary
+
+genel bölüm özeti
+
+# Bölüm 4- React Essentials - Deep Dive
+
+v60 - Module introduction
+
+JSX sahnelerinin arkasına bakacaz, 
+
+Component ve State işini mıncıklayacakmışız
+
+Daha iler iState kullanımı
+
+birde pattern işi varmış.
+
+önceki bölümün projesinden devam edecekmişşim ama sonradan tik tok 3x3 oyunu yapacakmışız.
+
+v61 - You dont have to use JSX
+
+yani özetle JSX olmadan da React’in derlenmiş halini yazarek da react kullanabiliyoruz. 
+
+React.createElement(… bla bla ) diyerek react kodu yazabilirsin hazır derlenmiş. ileride bazı teknolojiler bu kullanımı şart koşabilir. 
+
+v62 - Working with Fragments
+
+return verirken 1 TANE PARENT eleman tutmak zorundayız.
+
+genelde basit bir div olur bu.
+
+bunun da mantığı aslında JS’den geliyor.
+
+eee neticede bir fonksiyon bir kez return yapar. yani bir değer geri verir.
+
+e madem JSX rerturn yapıyor.
+
+O HALDE 1 PARENT return edecek!
+
+Eh tabi diyeceksin ki bilader ben web sayfamda header, body, bottom kullanmak istiyorum. En tepede bir div benim canımı sıkıyor. 
+
+O halde Fgrament kullancaksın en tepede bir parent olarak. Sayfa derlendiğinde bu fragment gözükmez merak etme.
+
+v63 - when you shoudl split components?
+
+app.jsx üstünde çok sorumluluk var. Bunu bölecek ve parçalyacağız.
+
+v64- Splitting Components By Feature and State
+
+### 🧱 Şu anki yapı:
+
+- `App.jsx` içinde **her şey var**:
+    - Header
+    - CoreConcept'ler
+    - Tab butonları ve interaktif alan
+    - `useState`, event handler, veri çekme
+
+---
+
+### ✅ Yapılacak Dönüşüm:
+
+### 🔹 1. `CoreConcepts.jsx` component’i oluşturuluyor
+
+- İçinde sadece:
+    - `section`
+    - `.map()` ile `CoreConcept` öğeleri
+- Dışarıdan: `coreConceptsData` ve `CoreConcept` import ediliyor
+
+### 🔹 2. `Examples.jsx` component’i oluşturuluyor
+
+- İçinde sadece:
+    - Butonlar (TabButton)
+    - Seçili konunun içeriği
+    - `useState` ve `handleSelect()` fonksiyonu
+- Dışarıdan: `examplesData`, `TabButton` import ediliyor
+
+v65- Problem: Props are not Forwerded to Inner Elements
+
+hoca semantik olarak section kullanmayı seviyor feature ların bitiş ve bailangıöç çizgilerin iatrımak için, dibv yerine kullanıyor
+
+v66 - Forwarding Props to Wrapped Elements
+
+bu ne şimdi mastercard reklamı mı? Parametrenin satın alamayacağı şeyler vardır , geri kalan her şey için props!
+
+### ChatGPT:
+
+Ahahahh ağam yaktın ortalığı 🔥😂
+
+> “Parametrenin satın alamayacağı şeyler vardır, geri kalan her şey için… props!”
+> 
+
+Yeminle bu:
+
+> React’ın gayriresmî sloganı olmaya aday.
+> 
+
+v67 - working iwth multiple JSX
+
+React’te bir bileşene birden fazla **JSX alanı** vermek istiyorsan, `children` dışında da prop tanımlayıp JSX verebilirsin. Bu pattern ileride çok lazım olacak.”
+
+v68- Setting Component Types Dynamicallly
+
+mode kullanımı yaratarak dinamik className değişimleri yrattık
+
+v69 - yukarıdaki ikisinin özeti
+
+v70 - XOX proje başlangıcı
+
+v71 - Not All Content must go into components
+
+hoca evvela sitenin üst kısmına kendi logomuzu bir koyalım hele diyor
+
+index.html’e birşeyler ekleyebilirsinm ama react projesinde pek nadir gerekir bu. Genelde meta data.
+
+eğer her sayfada sabit durmasını istediğin bir şey varsa buraya yazman mantıklı olabilir.
+
+public folder root folder sayılır bu yüzden dümdzü içindeki dosyalar slash olmadan src’lere eklenir
+
+v72 - şu public folder’ı açıklayan bir makale
+
+v73 - First Steps
+
+### 🧱 `<span>` nedir?
+
+- **Inline** bir HTML elementidir (yani satır içinde yer kaplar).
+- **Görsel olarak bir şey yapmaz**, sadece etiketler.
+- Genelde stil vermek, ikon + metni gruplamak gibi işler için kullanılır.
